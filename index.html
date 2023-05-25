@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Coding Quiz</title>
+</head>
+<body>
+    <!--outer div-->
+    <div class="show" id="outer-container">
+        <!--top-bar section-->
+        <div class="top-bar">
+            <button class="btn Highcores" id="view-highscores">View Highscores</button>
+            <p class="timer">Timer: <span id ="timer"></span></p>
+        </div>
+
+        <!--inner div-->
+        <div class="show" id="inner-container">
+            <!--first screen-->
+            <!--main header/quiz intro and start page-->
+            <header class="quiz-intro">
+                <h1>Welcome to the Coding Quiz!</h1>
+                <p>Test your knowledge of coding with this quiz! Keep in mind that wrong answers deduct remaining time. Click 'Start' to begin</p>
+                <button class="btn startend" id="start-quiz">Start</button>
+            </header>
+            <!--quiz content-->
+            <main>
+                <!--second screen-->
+                <section class="hide" id="question-screen">
+                    <h2 id="questions">Question</h2>
+                    <ul>
+                        <!--this will be generated in JavaScript-->
+                        <li><button class="btn-grid" id="ansswer-buttons">Answer 1</button></li>
+                        <li><button class="btn-grid" id="ansswer-buttons">Answer 2</button></li>
+                        <li><button class="btn-grid" id="ansswer-buttons">Answer 3</button></li>
+                        <li><button class="btn-grid" id="ansswer-buttons">Answer 4</button></li>
+                    </ul>
+                </section>
+                <!--third screen/results-->
+                <section class="hide" id="quiz-finish-screen">
+                    <h2>Quiz is finished!</h2>
+                    <p id="score-banner">Your Score: 00</p>
+                <div>    
+                    <label form="">Enter Initials:</label>
+                    <input type="text">
+                    <button class="btn startend" id="submit-score">Submit</button>
+                </div>    
+                </section>
+
+                <!--fourth screen-->
+                <section class="hide" id="highscores-screen">
+                    <h2 class="high-scores">Highscores</h2>
+                    <ol class="score-list" id="high-score-list">
+                        <!--this will also be generated in JavaScript-->
+                        <li>initials-score</li>
+                        <li>initials-score</li>
+                        <li>initials-score</li>
+                        <li>initials-score</li>
+
+                    </ol>
+                    <button class="btn" id="go-back">Go Back</button>
+                    <button class="btn" id="clear-high-scores">Clear Highscores</button>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <div class="hide" id="correct">
+        <h2>Correct</h2>
+    </div>
+    <div class="hide" id="wrong">
+        <h2>Wrong</h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
